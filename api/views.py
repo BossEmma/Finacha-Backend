@@ -37,11 +37,10 @@ def emailclient(text,html,receiver_email,message):
     pass
 
 
-stripe.api_key = "sk_test_51P9QB3P58KTe8Zo2xl2mNQQPoAOFFkhA6h1GUSXX9YR5cowo0LXAvoAVl8h3y7lfEbdegR1csKZC46Kr4etO0XVY00pVFw7CcL"
 
 # Set your secret key. Remember to switch to your live secret key in production.
 # See your keys here: https://dashboard.stripe.com/apikeys
-stripe.api_key = 'sk_test_51P9QB3P58KTe8Zo2xl2mNQQPoAOFFkhA6h1GUSXX9YR5cowo0LXAvoAVl8h3y7lfEbdegR1csKZC46Kr4etO0XVY00pVFw7CcL'
+stripe.api_key = "sk_test_51P9QB3P58KTe8Zo2xl2mNQQPoAOFFkhA6h1GUSXX9YR5cowo0LXAvoAVl8h3y7lfEbdegR1csKZC46Kr4etO0XVY00pVFw7CcL"
 
 cardholder = stripe.issuing.Cardholder.create(
   name="Mark Smith",
@@ -84,5 +83,10 @@ def Stripecard(request):
           "country": "GB",
         },
       },
+    )
+    stripe.issuing.Card.create(
+      cardholder=cardholder.stripe_id,
+      currency="usd",
+      type="virtual",
     )
     pass
