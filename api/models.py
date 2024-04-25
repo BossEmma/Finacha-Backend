@@ -17,7 +17,6 @@ from django.db.models.signals import pre_delete
 from django.dispatch import receiver
 import string
 from django.utils import timezone
-from .email_otp import text,otptext
 # Create your models here.
 User    = settings.AUTH_USER_MODEL
 
