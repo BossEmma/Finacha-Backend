@@ -22,5 +22,4 @@ from api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', finacha_website_views.home , name='home'),
-    path("create/Card",views.Stripecard,name="initiatecard"),
 ]
