@@ -11,4 +11,3 @@ django-countries
 babel
 boto3
 django-storages
-stripe
