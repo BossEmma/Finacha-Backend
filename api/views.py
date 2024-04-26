@@ -35,7 +35,7 @@ def emailclient(text,html,receiver_email,message):
         )
     pass
 
-#debug bridge
+#debug bridge,
 
 # Set your secret key. Remember to switch to your live secret key in production.
 # See your keys here: https://dashboard.stripe.com/apikey
